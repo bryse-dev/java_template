@@ -1,0 +1,11 @@
+development:
+  dialect: "sqlite3"
+  database: {{env "GOPATH" }}/github.com/brysearl/persei8/persei8_development.sqlite
+
+test:
+  dialect: "sqlite3"
+  database: {{env "GOPATH" }}/github.com/brysearl/persei8/persei8_test.sqlite
+
+production:
+  dialect: "sqlite3"
+  database: {{env "GOPATH" }}/github.com/brysearl/persei8/persei8_production.sqlite
