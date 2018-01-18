@@ -30,6 +30,11 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.10.0'
 }
 
+// Custom Tasks
+task getDeps(type: Copy) {
+  from sourceSets.main.runtimeClasspath
+  into 'runtime/'
+}
+
 // Define the main class for the application
 mainClassName = 'App'
-

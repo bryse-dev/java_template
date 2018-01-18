@@ -1,15 +1,19 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class OmicronApi {
 
-	private static String address;
-	private static int port;
-	
+	private static final Logger log = LogManager.getLogger("api");
+	private static String _address;
+	private static int _port;
+
 	public OmicronApi(String address, int port) {
-		this.address = address;
-		this.port = port;
+		this._address = address;
+		this._port = port;
 	}
-	
+
 	public String toString() {
-		return address + ":" + port;
+		return _address + ":" + _port;
 	}
-	
+
 }
